@@ -1,0 +1,232 @@
+﻿/*
+    Comp229 MVC Final Project
+    Mudrak Patel : 300878960
+    Javid Niftaliyeve : 300742916
+*/
+
+
+/**
+    Google fonts imported
+*/
+@import url('https://fonts.googleapis.com/css?family=Delius+Unicase|Indie+Flower|Karla|Merriweather+Sans|Pacifico|Quicksand|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Delius+Unicase');
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+/**
+    Other Stylings go below
+*/
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*
+    Styling for Index.cshtml page for Home view goes here
+*/
+.img-responsive.indexView {
+    background-image: url(cafe2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: -15px -10px -10px 0px;
+}
+
+.cafeSocietyText {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    color: darkgrey;
+    position: relative;
+    font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+    z-index: 1000;
+    /*text-shadow: 5px 5px 5px #35bee4, -5px -5px 5px #41d816;*/
+}
+
+.restaurantTextBody.col-lg-pull-5 {
+    margin-top: 100px;
+    font-family: Verdana,sans-serif;
+    font-size: 40px;
+    color: white;
+    position: center;
+    text-shadow: 1px 1px 5px #35bee4, -1px -1px 5px #41d816;
+}
+
+.linkDecoration {
+    font-size: 17px;
+    font-family: 'Russo One', sans-serif;
+}
+/**
+    Styling for Contact.cshtml page for Home view goes here
+*/
+.img-responsive.contactView {
+    background-image: url(../Assets/images/ContactPageWallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: -15px -10px -10px 0px;
+}
+
+.contactHeadingText {
+    font-family: Verdana,sans-serif,monospace;
+    font-size: 70px;
+    color: white;
+    position: relative;
+    z-index: 1000;
+    text-shadow: 5px 5px 5px #f808f4, -5px -5px 5px #1620d8;
+}
+
+.img-responsive.facebookIcon {
+    background-image: url(../Assets/images/facebookIcon.png);
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    position: fixed;
+}
+
+    .img-responsive.facebookIcon:hover {
+        cursor: pointer;
+    }
+
+.img-responsive.twitterIcon {
+    background-image: url(../Assets/images/twitterIcon.png);
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    margin-left: 82px;
+    position: fixed;
+}
+
+    .img-responsive.twitterIcon:hover {
+        cursor: pointer;
+    }
+
+.img-responsive.instagramIcon {
+    background-image: url(../Assets/images/instagramIcon.png);
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    margin-left: 165px;
+    position: fixed;
+}
+
+    .img-responsive.instagramIcon:hover {
+        cursor: pointer;
+    }
+
+.col-md-offset-4.contactDiv {
+    font-size: 28px;
+    background-color: white;
+    color: black;
+    margin-right: 20px;
+    position: fixed;
+}
+
+.mapImage {
+    margin-top: 100px;
+    height: 219px;
+    width: 304px;
+    background-image: url(http://designpractica.com/wp-content/uploads/2011/10/your-restaurant-on-google-maps-2.png);
+}
+/**
+    Styling for Index.cshtml page for Menu_List view goes here
+*/
+.img-responsive.menuPageWallpaper {
+    background-image: url(../Assets/images/MenuPageWallpaper.jpg);
+    background-repeat: no-repeat;
+    margin: -15px -10px -10px 0px;
+    background-size: cover;
+}
+
+.col-md-offset-1.menuHeaderText {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 60px;
+    color: white;
+}
+
+.table-hover.table-bordered.col-md-offset-2 {
+    background-color: white;
+    font-size: 20px;
+    opacity: 0.85;
+}
+
+th {
+    font-size: 30px;
+}
+/**
+    Styling for Details.cshtml page for Menu_List view goes here
+*/
+.img-responsive.detailsPageWallpaper {
+    background-image: url(../Assets/images/detailsPageWallpaper.jpg);
+    background-repeat: no-repeat;
+    margin: -15px -10px -10px 0px;
+    background-size: cover;
+}
+
+.container.img-responsive.bigItemImage {
+    height: 300px;
+    width: 450px;
+    opacity: 1.0;
+    background-size: cover;
+}
+
+.image1 { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h2{
+      position: absolute; 
+   top: 9px;
+   left: 0; 
+   width: 100%; 
+    font-family: "Perpetua", Cambria, "Times New Roman", Times, serif;
+    color: inherit;
+    position: relative;
+    font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+    text-rendering:optimizeLegibility;
+}
+
+h3{
+      position: absolute; 
+   top: 9px;
+   left: 0; 
+   width: 100%; 
+    font-family: "Perpetua", Cambria, "Times New Roman", Times, serif;
+    color: inherit;
+    position: relative;
+    font-size: 33px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+    text-rendering:optimizeLegibility;
+}
+.image2{
+    float:right;
+    margin-right:333px;
+}
+
+p{
+    text-align:center;
+}

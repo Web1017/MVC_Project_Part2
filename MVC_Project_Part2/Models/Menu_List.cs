@@ -21,6 +21,7 @@ namespace MVC_Project_Part2.Models
 
         [Required]
         [StringLength(450)]
+        [Display(Name = "Description")]
         public string LongDescription { get; set; }
 
         [Required]

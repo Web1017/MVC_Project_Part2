@@ -33,5 +33,6 @@
             <td style="font-size:25px; padding-left:15px;">@Html.ActionLink("Back to menu", "Index", new { @class = "btn btn-md btn-info" })</td>
         </tr>
     </table>
+    @Html.ActionLink("Add", "AddToCart", "ShoppingCart", new { id = Model.ItemId }, new {@class = "col-lg-offset-6 btn btn-lg btn-info" })
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.ItemId })*@
 </div>

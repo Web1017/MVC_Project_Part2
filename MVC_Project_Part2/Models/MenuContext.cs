@@ -28,6 +28,10 @@ namespace MVC_Project_Part2.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Menu_List>()
+                .Property(e => e.ItemPrice)
+                .IsConcurrencyToken(true);
+
+            modelBuilder.Entity<Menu_List>()
                 .Property(e => e.ShortDescription)
                 .IsUnicode(false);
 

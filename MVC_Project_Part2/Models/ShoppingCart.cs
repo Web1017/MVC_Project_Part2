@@ -11,7 +11,7 @@ namespace MVC_Project_Part2.Models
         //Create an object of MenuContext
         private MenuContext db = new MenuContext();
         //Properties
-        public int ShoppingCartID { get; set; }
+        public string ShoppingCartID { get; set; }
         public const string CartSessionKey = "CartId";
         private int ShoppingCartId { get; set; }
 
@@ -22,7 +22,7 @@ namespace MVC_Project_Part2.Models
         public static ShoppingCart GetCart(HttpContextBase context)
         {
             var cart = new ShoppingCart();
-            cart.ShoppingCartID = Convert.ToInt32(cart.GetCartId(context)); //This line might throw an exception
+            cart.ShoppingCartID = cart.GetCartId(context); //This line MIGHT throw an exception
             return cart;
         }
         ///<summary>
@@ -187,8 +187,7 @@ namespace MVC_Project_Part2.Models
             {
                 if (!string.IsNullOrWhiteSpace(context.User.Identity.Name))
                 {
-                    context.Session[CartSessionKey] =
-                        context.User.Identity.Name;
+                    context.Session[CartSessionKey] = context.User.Identity.Name;
                 }
                 else
                 {

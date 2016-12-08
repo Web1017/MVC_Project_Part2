@@ -13,6 +13,8 @@ namespace MVC_Project_Part2.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ItemId { get; set; }
 
+        [Required]
+        [Display(Name = "Price")]
         public int ItemPrice { get; set; }
 
         [Required]

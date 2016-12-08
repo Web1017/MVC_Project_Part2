@@ -22,7 +22,7 @@ namespace MVC_Project_Part2.Models
         public static ShoppingCart GetCart(HttpContextBase context)
         {
             var cart = new ShoppingCart();
-            cart.ShoppingCartID = cart.GetCartId(context);
+            cart.ShoppingCartID = Convert.ToInt32(cart.GetCartId(context));
             return cart;
         }
         ///<summary>
@@ -142,6 +142,79 @@ namespace MVC_Project_Part2.Models
 
             return total ?? decimal.Zero;
         }
+        ///<summary>
+        ///This method creates an order during the checkout
+        /// </summary>
+        public int CreateOrder(Order order)
+        {
+            decimal orderTotal = 0;
 
+            var cartItems = GetCartItems();
+            // Iterate over the items in the cart, 
+            // adding the order details for each
+            foreach (var item in cartItems)
+            {
+                var orderDetail = new OrderDetail
+                {
+                    ItemId = item.ItemID,
+                    OrderID = order.OrderID,
+                    UnitPrice = item.ItemID,
+                    Quantity = item.Count
+                };
+                // Set the order total of the shopping cart
+                orderTotal += (item.Count * item.ItemID);
+
+                db.OrderDetails.Add(orderDetail);
+
+            }
+            // Set the order's total to the orderTotal count
+            order.Total = orderTotal;
+
+            // Save the order
+            db.SaveChanges();
+            // Empty the shopping cart
+            EmptyCart();
+            // Return the OrderId as the confirmation number
+            return order.OrderID;
+        }
+        ///<summary>
+        ///This method returns the cart id
+        /// </summary>
+        // We're using HttpContextBase to allow access to cookies.
+        public string GetCartId(HttpContextBase context)
+        {
+            if (context.Session[CartSessionKey] == null)
+            {
+                if (!string.IsNullOrWhiteSpace(context.User.Identity.Name))
+                {
+                    context.Session[CartSessionKey] =
+                        context.User.Identity.Name;
+                }
+                else
+                {
+                    // Generate a new random GUID using System.Guid class
+                    Guid tempCartId = Guid.NewGuid();
+                    // Send tempCartId back to client as a cookie
+                    context.Session[CartSessionKey] = tempCartId.ToString();
+                }
+            }
+            return context.Session[CartSessionKey].ToString();
+        }
+        /////<summary>
+        /////This method checks user login status to migrate their cart
+        ///// </summary>
+        //// When a user has logged in, migrate their shopping cart to
+        //// be associated with their username
+        //public void MigrateCart(string userName)
+        //{
+        //    var shoppingCart = db.Carts.Where(
+        //        c => c.CartID == ShoppingCartId);
+
+        //    foreach (Cart item in shoppingCart)
+        //    {
+        //        (item.CartID) = userName;
+        //    }
+        //    db.SaveChanges();
+        //}
     }
 }

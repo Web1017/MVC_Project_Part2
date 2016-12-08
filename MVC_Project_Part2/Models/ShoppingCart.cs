@@ -22,7 +22,7 @@ namespace MVC_Project_Part2.Models
         public static ShoppingCart GetCart(HttpContextBase context)
         {
             var cart = new ShoppingCart();
-            cart.ShoppingCartID = Convert.ToInt32(cart.GetCartId(context));
+            cart.ShoppingCartID = Convert.ToInt32(cart.GetCartId(context)); //This line might throw an exception
             return cart;
         }
         ///<summary>
@@ -212,7 +212,7 @@ namespace MVC_Project_Part2.Models
 
         //    foreach (Cart item in shoppingCart)
         //    {
-        //        (item.CartID) = userName;
+        //        item.CartID = userName;
         //    }
         //    db.SaveChanges();
         //}

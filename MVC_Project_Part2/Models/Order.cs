@@ -13,6 +13,7 @@ namespace MVC_Project_Part2.Models
         [ScaffoldColumn(false)]
         public int OrderID { get; set; }
 
+        [ScaffoldColumn(false)]
         [StringLength(20)]
         public string Username { get; set; }
 

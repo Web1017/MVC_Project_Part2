@@ -10,6 +10,7 @@ namespace MVC_Project_Part2.Models
     public partial class Order
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [ScaffoldColumn(false)]
         public int OrderID { get; set; }
 
         [StringLength(20)]

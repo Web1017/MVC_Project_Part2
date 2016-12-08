@@ -266,10 +266,10 @@
     <Content Include="Views\Menu_List\Details.cshtml" />
     <Content Include="Views\Menu_List\Edit.cshtml" />
     <Content Include="Views\Menu_List\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\ShoppingCart\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

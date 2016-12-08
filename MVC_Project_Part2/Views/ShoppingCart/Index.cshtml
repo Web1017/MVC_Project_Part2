@@ -6,7 +6,7 @@
 <script src="/Scripts/jquery-1.4.4.min.js"
         type="text/javascript"></script>
 <script type="text/javascript">
-    $(function () {
+    (function () { 
         // Document.ready -> link up remove event handler
         $(".RemoveLink").click(function () {
             // Get the id from the link
@@ -28,7 +28,7 @@
                     });
             }
         });
-    });
+    })();
 </script>
 
 <h3>

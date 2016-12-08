@@ -20,34 +20,42 @@ namespace MVC_Project_Part2.Models
 
         [Required(ErrorMessage = "Firstname is required")]
         [StringLength(20)]
+        [DisplayName("First Name")]
         public string Firstname { get; set; }
 
         [Required(ErrorMessage = "Lastname is required")]
         [StringLength(20)]
+        [DisplayName("Last Name")]
         public string Lastname { get; set; }
 
         [Required(ErrorMessage = "Address is required")]
         [StringLength(150)]
+        [DisplayName("Address")]
         public string Address { get; set; }
 
         [Required(ErrorMessage = "City is required")]
         [StringLength(15)]
+        [DisplayName("City")]
         public string City { get; set; }
 
         [Required(ErrorMessage = "State is required")]
         [StringLength(15)]
+        [DisplayName("State")]
         public string State { get; set; }
 
         [Required(ErrorMessage = "Postal code is required")]
         [StringLength(10)]
+        [DisplayName("Postal Code")]
         public string Postalcode { get; set; }
 
         [Required(ErrorMessage = "Country is required")]
         [StringLength(20)]
+        [DisplayName("Country")]
         public string Country { get; set; }
 
         [Required(ErrorMessage = "Phone number is required")]
         [StringLength(15)]
+        [DisplayName("Phone Number")]
         public string Phone { get; set; }
 
         [Required(ErrorMessage = "Email ID is required")]

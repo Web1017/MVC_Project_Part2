@@ -230,3 +230,9 @@ h3{
 p{
     text-align:center;
 }
+/*
+    Styles for the combined View of Index, About and Contact
+*/
+.img-responsive.bannerImage{
+    background-image:url(../Assets/images/cafe2.jpg);
+}

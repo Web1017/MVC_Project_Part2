@@ -235,4 +235,6 @@ p{
 */
 .img-responsive.bannerImage{
     background-image:url(../Assets/images/cafe2.jpg);
+    height:400px;
+    background-size:cover;
 }

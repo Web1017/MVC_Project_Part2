@@ -12,25 +12,13 @@ namespace MVC_Project_Part2.Models
         {
         }
 
-        public virtual DbSet<Menu_List> Menu_Lists { get; set; }
-
-        //New features of the shopping Cart functionality
         public virtual DbSet<Cart> Carts { get; set; }
+        public virtual DbSet<Menu_List> Menu_List { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
 
-        //This is the new version of the method OnMdelCreating
-        //that returns void and takes in an argument of type
-        //DbModelBuilder object.
-
-        //This method was pasted after pasting the new features of
-        //shopping Cart functionality.
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Menu_List>()
-                .Property(e => e.ItemPrice)
-                .IsConcurrencyToken(true);
-
             modelBuilder.Entity<Menu_List>()
                 .Property(e => e.ShortDescription)
                 .IsUnicode(false);

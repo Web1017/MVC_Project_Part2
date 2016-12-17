@@ -6,15 +6,12 @@ namespace MVC_Project_Part2.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Menu List")]
     public partial class Menu_List
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ItemId { get; set; }
 
-        [Required]
-        [Display(Name = "Price")]
         public int ItemPrice { get; set; }
 
         [Required]
@@ -23,7 +20,6 @@ namespace MVC_Project_Part2.Models
 
         [Required]
         [StringLength(450)]
-        [Display(Name = "Description")]
         public string LongDescription { get; set; }
 
         [Required]

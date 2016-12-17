@@ -106,5 +106,17 @@ namespace MVC_Project_Part2.Models
             return db.Carts.Where(
                 cart => cart.CartId == ShoppingCartId).ToList();
         }
+        /**
+         GetCount method
+         */
+        public int GetCount()
+        {
+            // Get the count of each item in the cart and sum them up
+            int? count = (from cartItems in db.Carts
+                          where cartItems.CartId == ShoppingCartId
+                          select (int?)cartItems.Count).Sum();
+            // Return 0 if all entries are null
+            return count ?? 0;
+        }
     }
 }

@@ -14,33 +14,43 @@ namespace MVC_Project_Part2.Models
         public int OrderID { get; set; }
 
         [StringLength(20)]
+        [Required(ErrorMessage = "Required!")]
         public string Username { get; set; }
 
         [StringLength(20)]
+        [Required(ErrorMessage = "Required!")]
         public string Firstname { get; set; }
 
         [StringLength(20)]
+        [Required(ErrorMessage = "Required!")]
         public string Lastname { get; set; }
 
         [StringLength(150)]
+        [Required(ErrorMessage = "Required!")]
         public string Address { get; set; }
 
         [StringLength(15)]
+        [Required(ErrorMessage = "Required!")]
         public string City { get; set; }
 
         [StringLength(15)]
+        [Required(ErrorMessage = "Required!")]
         public string State { get; set; }
 
         [StringLength(10)]
+        [Required(ErrorMessage = "Required!")]
         public string Postalcode { get; set; }
 
         [StringLength(20)]
+        [Required(ErrorMessage = "Required!")]
         public string Country { get; set; }
 
         [StringLength(15)]
+        [Required(ErrorMessage = "Required!")]
         public string Phone { get; set; }
 
         [StringLength(20)]
+        [Required(ErrorMessage = "Required!")]
         public string Email { get; set; }
 
         public decimal? Total { get; set; }

@@ -83,5 +83,20 @@ namespace MVC_Project_Part2.Models
             }
             return itemCount;
         }
+        /**
+         EmptyCart
+         */
+        public void EmptyCart()
+        {
+            var cartItems = db.Carts.Where(
+                cart => cart.CartId == ShoppingCartId);
+
+            foreach (var cartItem in cartItems)
+            {
+                db.Carts.Remove(cartItem);
+            }
+            // Save changes
+            db.SaveChanges();
+        }
     }
 }

@@ -10,6 +10,7 @@ namespace MVC_Project_Part2.Models
     public partial class OrderDetail
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [ScaffoldColumn(false)]
         public int OrderDetailID { get; set; }
 
         public int OrderId { get; set; }

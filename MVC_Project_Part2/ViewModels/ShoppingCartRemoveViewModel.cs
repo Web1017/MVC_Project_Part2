@@ -6,9 +6,12 @@ using MVC_Project_Part2.Models;
 
 namespace MVC_Project_Part2.ViewModels
 {
-    public class ShoppingCartViewModel
+    public class ShoppingCartRemoveViewModel
     {
-        public List<Cart> CartItems { get; set; }
+        public string Message { get; set; }
         public decimal CartTotal { get; set; }
+        public int CartCount { get; set; }
+        public int ItemCount { get; set; }
+        public int DeleteId { get; set; }
     }
 }

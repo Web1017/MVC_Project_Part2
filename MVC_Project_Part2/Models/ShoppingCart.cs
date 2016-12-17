@@ -98,5 +98,13 @@ namespace MVC_Project_Part2.Models
             // Save changes
             db.SaveChanges();
         }
+        /**
+         GetCartItems
+         */
+        public List<Cart> GetCartItems()
+        {
+            return db.Carts.Where(
+                cart => cart.CartId == ShoppingCartId).ToList();
+        }
     }
 }

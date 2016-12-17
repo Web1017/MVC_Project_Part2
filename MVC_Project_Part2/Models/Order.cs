@@ -50,6 +50,9 @@ namespace MVC_Project_Part2.Models
         public string Phone { get; set; }
 
         [StringLength(20)]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}",
+            ErrorMessage = "Email is is not valid.")]
+        [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "Required!")]
         public string Email { get; set; }
 

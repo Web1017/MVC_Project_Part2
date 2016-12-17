@@ -9,6 +9,7 @@ namespace MVC_Project_Part2.Models
     [Table("Order")]
     public partial class Order
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int OrderID { get; set; }
 

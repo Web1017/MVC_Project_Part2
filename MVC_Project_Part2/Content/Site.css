@@ -71,81 +71,25 @@ textarea {
     text-shadow: 1px 1px 5px #35bee4, -1px -1px 5px #41d816;
 }
 
-.linkDecoration {
-    font-size: 17px;
-    font-family: 'Russo One', sans-serif;
+/*.linkDecoration {
+   font-size: 17px;
+   font-family: 'Russo One', sans-serif;
 }
+    */
+
 /**
-    Styling for Contact.cshtml page for Home view goes here
+    Contact Page Design
 */
-.img-responsive.contactView {
-    background-image: url(../Assets/images/ContactPageWallpaper.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.img-responsive.imgdiv {
+    background-image: url('../Assets/images/contactb.jpg');
     margin: -15px -10px -10px 0px;
-}
-
-.contactHeadingText {
-    font-family: Verdana,sans-serif,monospace;
-    font-size: 70px;
-    color: white;
-    position: relative;
-    z-index: 1000;
-    text-shadow: 5px 5px 5px #f808f4, -5px -5px 5px #1620d8;
-}
-
-.img-responsive.facebookIcon {
-    background-image: url(../Assets/images/facebookIcon.png);
     background-size: cover;
-    height: 80px;
-    width: 80px;
-    position: fixed;
+    float:right;
+    margin-right:233px;
+
+
 }
 
-    .img-responsive.facebookIcon:hover {
-        cursor: pointer;
-    }
-
-.img-responsive.twitterIcon {
-    background-image: url(../Assets/images/twitterIcon.png);
-    background-size: cover;
-    height: 80px;
-    width: 80px;
-    margin-left: 82px;
-    position: fixed;
-}
-
-    .img-responsive.twitterIcon:hover {
-        cursor: pointer;
-    }
-
-.img-responsive.instagramIcon {
-    background-image: url(../Assets/images/instagramIcon.png);
-    background-size: cover;
-    height: 80px;
-    width: 80px;
-    margin-left: 165px;
-    position: fixed;
-}
-
-    .img-responsive.instagramIcon:hover {
-        cursor: pointer;
-    }
-
-.col-md-offset-4.contactDiv {
-    font-size: 28px;
-    background-color: white;
-    color: black;
-    margin-right: 20px;
-    position: fixed;
-}
-
-.mapImage {
-    margin-top: 100px;
-    height: 219px;
-    width: 304px;
-    background-image: url(http://designpractica.com/wp-content/uploads/2011/10/your-restaurant-on-google-maps-2.png);
-}
 /**
     Styling for Index.cshtml page for Menu_List view goes here
 */
@@ -225,8 +169,15 @@ h3{
 .image2{
     float:right;
     margin-right:333px;
+    
 }
 
 p{
+    text-align:center;
+}
+.image3 {
+
+}
+ p{
     text-align:center;
 }

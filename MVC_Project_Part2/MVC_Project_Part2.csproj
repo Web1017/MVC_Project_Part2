@@ -193,10 +193,14 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\images\1070.jpg" />
     <Content Include="Assets\images\about1.jpg" />
     <Content Include="Assets\images\cafe1.jpg" />
     <Content Include="Assets\images\cafe2.jpg" />
+    <Content Include="Assets\images\Capture12.JPG" />
+    <Content Include="Assets\images\contactb.jpg" />
     <Content Include="Assets\images\ContactPageWallpaper.jpg" />
+    <Content Include="Assets\images\contactUs.jpg" />
     <Content Include="Assets\images\detailsPageWallpaper.jpg" />
     <Content Include="Assets\images\dinner1.jpg" />
     <Content Include="Assets\images\facebookIcon.png" />
@@ -273,6 +277,11 @@
     <Content Include="Views\ShoppingCart\Index.cshtml" />
     <Content Include="Views\Checkout\AddressAndPayment.cshtml" />
     <Content Include="Views\Checkout\Complete.cshtml" />
+    <Content Include="Views\ContactUs\Create.cshtml" />
+    <Content Include="Views\ContactUs\Delete.cshtml" />
+    <Content Include="Views\ContactUs\Details.cshtml" />
+    <Content Include="Views\ContactUs\Edit.cshtml" />
+    <Content Include="Views\ContactUs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -298,11 +307,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>37954</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:37954/</IISUrl>
+          <IISUrl>http://localhost:37957/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

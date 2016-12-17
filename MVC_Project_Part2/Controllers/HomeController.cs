@@ -17,8 +17,8 @@ namespace MVC_Project_Part2.Controllers
         {
             //ViewBag.Message = "Your application description page.";
 
-            //return View();
-            return RedirectToAction("Index");
+            return View("About");
+           // return RedirectToAction("About");
         }
 
         public ActionResult Contact()
@@ -26,7 +26,8 @@ namespace MVC_Project_Part2.Controllers
             //ViewBag.Message = "Stay connected!";
 
             //return View();
-            return RedirectToAction("Index");
+           // return RedirectToAction("Contact");
+            return View("Contact");
         }
     }
 }

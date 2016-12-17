@@ -4,6 +4,7 @@ namespace MVC_Project_Part2.Models
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using MVC_Project_Part2.Models;
 
     public partial class MenuContext : DbContext
     {

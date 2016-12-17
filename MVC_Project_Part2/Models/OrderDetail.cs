@@ -1,4 +1,4 @@
-namespace MVC_Project_Part2.Models
+namespace MVC_CartDemo.Models
 {
     using System;
     using System.Collections.Generic;

@@ -198,12 +198,14 @@
     <Content Include="Assets\images\cafe1.jpg" />
     <Content Include="Assets\images\cafe2.jpg" />
     <Content Include="Assets\images\Capture12.JPG" />
+    <Content Include="Assets\images\coffee2.jpg" />
+    <Content Include="Assets\images\coffee5.jpg" />
     <Content Include="Assets\images\contactb.jpg" />
     <Content Include="Assets\images\ContactPageWallpaper.jpg" />
-    <Content Include="Assets\images\contactUs.jpg" />
     <Content Include="Assets\images\detailsPageWallpaper.jpg" />
     <Content Include="Assets\images\dinner1.jpg" />
     <Content Include="Assets\images\facebookIcon.png" />
+    <Content Include="Assets\images\fullmaps.png" />
     <Content Include="Assets\images\icon.ico" />
     <Content Include="Assets\images\IndexPageWallpaper.jpg" />
     <Content Include="Assets\images\instagramIcon.png" />

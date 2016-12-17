@@ -17,6 +17,8 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    height: 100%;
+    width: 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -133,8 +135,11 @@ th {
 }
 
 .image1 { 
-   position: relative; 
+   
    width: 100%; /* for IE 6 */
+   margin-right:333px;
+   float:right;
+
 }
 
 h2{
@@ -168,7 +173,7 @@ h3{
 }
 .image2{
     float:right;
-    margin-right:333px;
+    margin-right:433px;
     
 }
 

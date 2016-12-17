@@ -42,7 +42,7 @@
 <table>
     <tr>
         <th>
-            Item Name
+            Item ID
         </th>
         <th>
             Price (each)
@@ -56,7 +56,8 @@
     {
         <tr id="row-@item.ItemId">
             <td>
-                @Html.ActionLink(item.ItemId.ToString(),"Details", "Store", new { id = item.ItemId }, null)
+                @*@Html.ActionLink(item.ItemId.ToString(),"../ShoppingCart/GetCartItems", "ShoppingCart", new { id = item.ItemId }, null)*@
+                @item.ItemId
             </td>
             <td>
                 @item.

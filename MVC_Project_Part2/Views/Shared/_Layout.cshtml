@@ -28,10 +28,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "../Home/Index", "Home", new { @class = "linkDecoration" })</li>
-                    <li>@Html.ActionLink("Contact", "../Home/Contact", "Home", new { @class = "linkDecoration" })</li>
-                    <li>@Html.ActionLink("Menu", "../Menu_List/Index", "Menu_List", new { @class = "linkDecoration" })</li>
-                    <li>@Html.Partial("_LoginPartial", new { @class = "linkDecoration" })</li>
+                    <li>@Html.ActionLink("Home", "../Home/Index", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "../Home/Contact", "Home")</li>
+                    <li>@Html.ActionLink("About", "../Home/About", "Home")</li>
+                    <li>@Html.ActionLink("Menu", "../Menu_List/Index", "Menu_List")</li>
+                    <li>@Html.Partial("_LoginPartial")</li>
                 </ul>
                 @*NOTE: Please DONOT REMOVE the commented Html.Partial() below*@
                 @*@Html.Partial("_LoginPartial")*@

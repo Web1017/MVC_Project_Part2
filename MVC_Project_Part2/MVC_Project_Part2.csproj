@@ -186,17 +186,26 @@
     <Compile Include="Models\Menu_List.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ShoppingCartRemoveViewModel.cs" />
+    <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\images\1070.jpg" />
     <Content Include="Assets\images\about1.jpg" />
     <Content Include="Assets\images\cafe1.jpg" />
     <Content Include="Assets\images\cafe2.jpg" />
+    <Content Include="Assets\images\Capture12.JPG" />
+    <Content Include="Assets\images\coffee2.jpg" />
+    <Content Include="Assets\images\coffee5.jpg" />
+    <Content Include="Assets\images\contactb.jpg" />
     <Content Include="Assets\images\ContactPageWallpaper.jpg" />
     <Content Include="Assets\images\detailsPageWallpaper.jpg" />
     <Content Include="Assets\images\dinner1.jpg" />
     <Content Include="Assets\images\facebookIcon.png" />
+    <Content Include="Assets\images\fullmaps.png" />
     <Content Include="Assets\images\icon.ico" />
     <Content Include="Assets\images\IndexPageWallpaper.jpg" />
     <Content Include="Assets\images\instagramIcon.png" />
@@ -228,9 +237,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -264,6 +271,19 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Menu_List\Create.cshtml" />
+    <Content Include="Views\Menu_List\Delete.cshtml" />
+    <Content Include="Views\Menu_List\Details.cshtml" />
+    <Content Include="Views\Menu_List\Edit.cshtml" />
+    <Content Include="Views\Menu_List\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\Checkout\AddressAndPayment.cshtml" />
+    <Content Include="Views\Checkout\Complete.cshtml" />
+    <Content Include="Views\ContactUs\Create.cshtml" />
+    <Content Include="Views\ContactUs\Delete.cshtml" />
+    <Content Include="Views\ContactUs\Details.cshtml" />
+    <Content Include="Views\ContactUs\Edit.cshtml" />
+    <Content Include="Views\ContactUs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -289,11 +309,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>37954</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:37954/</IISUrl>
+          <IISUrl>http://localhost:37957/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

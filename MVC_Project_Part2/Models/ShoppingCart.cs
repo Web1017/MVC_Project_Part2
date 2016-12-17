@@ -190,5 +190,21 @@ namespace MVC_Project_Part2.Models
             }
             return context.Session[CartSessionKey].ToString();
         }
+        /**
+         MigrateCart method
+         */
+        // When a user has logged in, migrate their shopping cart to
+        // be associated with their username
+        public void MigrateCart(string userName)
+        {
+            var shoppingCart = db.Carts.Where(
+                c => c.CartId == ShoppingCartId);
+
+            foreach (Cart item in shoppingCart)
+            {
+                item.CartId = userName;
+            }
+            db.SaveChanges();
+        }
     }
 }

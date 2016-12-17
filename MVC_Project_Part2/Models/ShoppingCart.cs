@@ -133,5 +133,39 @@ namespace MVC_Project_Part2.Models
 
             return total ?? decimal.Zero;
         }
+        /**
+         CreateOrder method
+         */
+        public int CreateOrder(Order order)
+        {
+            decimal orderTotal = 0;
+
+            var cartItems = GetCartItems();
+            // Iterate over the items in the cart, 
+            // adding the order details for each
+            foreach (var item in cartItems)
+            {
+                var orderDetail = new OrderDetail
+                {
+                    ItemId = item.ItemId,
+                    OrderId = order.OrderId,
+                    Quantity = item.Count
+                };
+                // Set the order total of the shopping cart
+                orderTotal += (item.Count * item.ItemId);
+
+                db.OrderDetails.Add(orderDetail);
+
+            }
+            // Set the order's total to the orderTotal count
+            order.Total = orderTotal;
+
+            // Save the order
+            db.SaveChanges();
+            // Empty the shopping cart
+            EmptyCart();
+            // Return the OrderId as the confirmation number
+            return order.OrderId;
+        }
     }
 }

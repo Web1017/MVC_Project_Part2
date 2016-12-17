@@ -11,7 +11,7 @@ namespace MVC_Project_Part2.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int OrderID { get; set; }
+        public int OrderId { get; set; }
 
         [StringLength(20)]
         [Required(ErrorMessage = "Required!")]

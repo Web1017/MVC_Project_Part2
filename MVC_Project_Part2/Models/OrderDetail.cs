@@ -12,7 +12,7 @@ namespace MVC_Project_Part2.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int OrderDetailID { get; set; }
 
-        public int OrderID { get; set; }
+        public int OrderId { get; set; }
 
         public int ItemId { get; set; }
 

@@ -55,6 +55,33 @@ namespace MVC_Project_Part2.Models
             // Save changes
             db.SaveChanges();
         }
+        /**
+         RemoveFromCart method
+         */
+        public int RemoveFromCart(int id)
+        {
+            // Get the cart
+            var cartItem = db.Carts.Single(
+                cart => cart.CartId == ShoppingCartId
+                && cart.ItemId == id);
 
+            int itemCount = 0;
+
+            if (cartItem != null)
+            {
+                if (cartItem.Count > 1)
+                {
+                    cartItem.Count--;
+                    itemCount = cartItem.Count;
+                }
+                else
+                {
+                    db.Carts.Remove(cartItem);
+                }
+                // Save changes
+                db.SaveChanges();
+            }
+            return itemCount;
+        }
     }
 }

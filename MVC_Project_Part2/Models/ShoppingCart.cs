@@ -118,5 +118,20 @@ namespace MVC_Project_Part2.Models
             // Return 0 if all entries are null
             return count ?? 0;
         }
+        /**
+         GetTotal method
+         */
+        public decimal GetTotal()
+        {
+            // Multiply item price by count of that item to get 
+            // the current price for each of those items in the cart
+            // sum all item price totals to get the cart total
+            decimal? total = (from cartItems in db.Carts
+                              where cartItems.CartId == ShoppingCartId
+                              select (int?)cartItems.Count *
+                              cartItems.Count).Sum();
+
+            return total ?? decimal.Zero;
+        }
     }
 }

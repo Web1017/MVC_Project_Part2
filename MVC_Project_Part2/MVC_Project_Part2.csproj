@@ -265,19 +265,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Menu_List\Create.cshtml" />
-    <Content Include="Views\Menu_List\Delete.cshtml" />
-    <Content Include="Views\Menu_List\Details.cshtml" />
-    <Content Include="Views\Menu_List\Edit.cshtml" />
-    <Content Include="Views\Menu_List\Index.cshtml" />
-    <Content Include="Views\ShoppingCart\Index.cshtml" />
-    <Content Include="Views\Checkout\AddressAndPayment.cshtml" />
-    <Content Include="Views\Checkout\Complete.cshtml" />
     <Content Include="Views\ContactUs\Create.cshtml" />
     <Content Include="Views\ContactUs\Delete.cshtml" />
     <Content Include="Views\ContactUs\Details.cshtml" />
     <Content Include="Views\ContactUs\Edit.cshtml" />
     <Content Include="Views\ContactUs\Index.cshtml" />
+    <Content Include="Views\Menu_List\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

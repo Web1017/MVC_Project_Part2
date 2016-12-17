@@ -1,0 +1,37 @@
+﻿@*Comp229 MVC Final Project
+    Mudrak  Patel : 300878960
+    Javid Niftaliyeve : 300742916*@
+
+@model MVC_Project_Part2.Models.Menu_List
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="img-responsive detailsPageWallpaper">
+    <h2>Details of @Model.ItemName</h2>
+    <table class="table-hover table-bordered col-md-offset-2">
+        <tr>
+            <td style="font-size:20px; text-align:right">@Html.DisplayNameFor(model => model.ItemName): </td>
+            <td style="font-size:25px; padding-left:15px;">@Html.DisplayFor(model => model.ItemName)</td>
+        </tr>
+        <tr>
+            <td style="font-size:20px; text-align:right">@Html.DisplayNameFor(model => model.ItemPrice): </td>
+            <td style="font-size:25px; padding-left:15px;">@Html.DisplayFor(model => model.ItemPrice)</td>
+        </tr>
+        <tr>
+            <td style="font-size:20px; text-align:right">@Html.DisplayNameFor(model => model.LongDescription): </td>
+            <td style="font-size:25px; padding-left:15px;">@Html.DisplayFor(model => model.LongDescription)</td>
+        </tr>
+        <tr>
+            <td style="font-size:20px; text-align:right">Image: </td>
+            <td style="font-size:25px; padding-left:15px;">
+                <img src="@Url.Content(Model.IconImage)" alt="Image" class="container img-responsive bigItemImage" />
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size:20px; text-align:right"></td>
+            <td style="font-size:25px; padding-left:15px;">@Html.ActionLink("Back to menu", "Index", new { @class = "btn btn-md btn-info" })</td>
+        </tr>
+    </table>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ItemId })*@
+</div>

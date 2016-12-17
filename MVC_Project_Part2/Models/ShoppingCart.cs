@@ -9,5 +9,52 @@ namespace MVC_Project_Part2.Models
     public class ShoppingCart
     {
         private MenuContext db = new MenuContext();
+        private string ShoppingCartId { get; set; }
+        public const string CartSessionKey = "CartId";
+        /**
+         GetCart methods two overloads
+         */
+        public static ShoppingCart GetCart(HttpContextBase context)
+        {
+            var cart = new ShoppingCart();
+            cart.ShoppingCartId = cart.GetCartId(context);
+            return cart;
+        }
+        public static ShoppingCart GetCart(Controller controller)
+        {
+            return GetCart(controller.HttpContext);
+        }
+        /**
+         AddToCart method
+         */
+        public void AddToCart(Menu_List menuItem)
+        {
+            // Get the matching cart and album instances
+            var cartItem = db.Carts.SingleOrDefault(
+                c => c.CartId == ShoppingCartId
+                && c.ItemId == menuItem.ItemId);
+
+            if (cartItem == null)
+            {
+                // Create a new cart item if no cart item exists
+                cartItem = new Cart
+                {
+                    ItemId = menuItem.ItemId,
+                    CartId = ShoppingCartId,
+                    Count = 1,
+                    DateCreated = DateTime.Now
+                };
+                db.Carts.Add(cartItem);
+            }
+            else
+            {
+                // If the item does exist in the cart, 
+                // then add one to the quantity
+                cartItem.Count++;
+            }
+            // Save changes
+            db.SaveChanges();
+        }
+
     }
 }

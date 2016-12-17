@@ -13,8 +13,9 @@ namespace MVC_Project_Part2.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ItemId { get; set; }
 
-        public int CartId { get; set; }
+        public string CartId { get; set; }
 
         public int Count { get; set; }
+        public System.DateTime DateCreated { get; set; }
     }
 }

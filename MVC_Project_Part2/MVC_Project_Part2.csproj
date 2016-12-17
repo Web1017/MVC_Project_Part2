@@ -271,6 +271,7 @@
     <Content Include="Views\ContactUs\Edit.cshtml" />
     <Content Include="Views\ContactUs\Index.cshtml" />
     <Content Include="Views\Menu_List\Details.cshtml" />
+    <Content Include="Views\Menu_List\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
